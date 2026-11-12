@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Funnel Lab — демо воронки с ИИ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="top">
+    <a class="brand" href="/">Funnel Lab</a>
+    <nav>
+      <a href="/crm">CRM</a>
+      <a href="https://github.com/blessed-bless/ai-funnel-ecosystem-demo" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <p class="brand-mark">Funnel Lab</p>
+    <h1>Лид заходит. Бот думает. CRM фиксирует.</h1>
+    <p class="lead">
+      Портфолио-демо: лендинг → чат с ИИ → заявка в mini-CRM.
+      Без продакшен-секретов. Mock-мозг работает сразу.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#chat">Прогнать воронку</a>
+      <a class="btn ghost" href="/crm">Открыть CRM</a>
+    </div>
+  </main>
+
+  <section id="chat" class="panel">
+    <h2>Демо-чат</h2>
+    <p class="hint">Напиши задачу. Для заявки добавь контакт и фразу «оставь заявку».</p>
+    <div id="log" class="log" aria-live="polite"></div>
+    <form id="chat-form" class="composer">
+      <input id="message" type="text" maxlength="4000" placeholder="Нужен бот под заявки, я @demo_user" required />
+      <button type="submit">Отправить</button>
+    </form>
+    <div class="actions">
+      <button type="button" id="submit-lead" class="btn secondary" disabled>Отправить заявку в CRM</button>
+      <span id="status" class="status"></span>
+    </div>
+  </section>
+
+  <footer>
+    <span>Автор: Богдан Щербинин · blessed-bless</span>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
